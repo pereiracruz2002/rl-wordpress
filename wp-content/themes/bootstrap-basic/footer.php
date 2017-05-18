@@ -6,6 +6,7 @@
  */
 ?>
 <section id="pre_footer">
+<hr />
     <div class="container">
         <div class="row">
             <div class="col-md-2 col-md-offset-1">

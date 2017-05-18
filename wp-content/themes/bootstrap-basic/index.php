@@ -21,7 +21,7 @@ $categories=get_categories($args);
 //     echo '<p> Description:'. $category->description . '</p>';
 //     echo '<p> Post Count: '. $category->count . '</p>'; 
 // } 
-$rand_keys = array_rand($categories, 2);
+$rand_keys = array_rand($categories, 1);
 echo $categories[$rand_keys[0]] . "\n";
 echo $categories[$rand_keys[1]] . "\n";
 ?>
@@ -85,7 +85,7 @@ echo $categories[$rand_keys[1]] . "\n";
 
 					            foreach( $myposts as $post ) :  setup_postdata($post);
 					            ?>
-                            <div class="col-md-3 separa_coluna">
+                            <div class="col-md-3 col-xs-6 col-sm-6 separa_coluna">
                                 <?php the_post_thumbnail('thumbnail', array('class' => 'flutuar-img')); ?>
                                 <div class="txt_desc">
                                      <?php echo the_title();?><br>

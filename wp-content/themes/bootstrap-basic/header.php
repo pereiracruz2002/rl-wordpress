@@ -46,9 +46,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-2 col-md-offset-1">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri();?>/img/logo.png" class="img-responsive" alt="logo">
-                        </a>
+                       
+                            <a id="logotipo" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><img src="<?php echo get_template_directory_uri();?>/img/logo.png" class="img-responsive" alt="logo">
+     
                     </div>
                     <div class="col-md-9">
                         <div class="row">
@@ -59,26 +59,41 @@
                         </div>
                         <div id="bloco-menu" class="row">
                             <div class="col-md-8">
-                                <ul class="nav navbar-nav">
+                            	<nav class="navbar navbar-default" role="navigation">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary-collapse">
+										<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+							
+								<div class="collapse navbar-collapse navbar-primary-collapse">
+									<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?> 
+									
+								</div><!--.navbar-collapse-->
+
+						</nav>
+                                <!-- <ul class="nav navbar-nav">
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">Empresas</a></li>
                                     <li><a href="#">Novidades</a></li>
                                     <li><a href="#">Fornecedores</a></li>
                                     <li><a href="#">Showroom</a></li>
                                     <li><a href="#">Trabalhe conosco</a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                             
                             <div class="col-md-3">
                                 <form class="form-inline">
                                     <div class="form-group">
-                                    
-                                    <div class="input-group">
-                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Procurar">
-                                    <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+	                                    <div class="input-group">
+	                                    	<input type="text" class="form-control" id="exampleInputAmount" placeholder="Procurar">
+	                                    <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+	                                    </div>
                                     </div>
-                                    </div>
-                                    </form>
+                                </form>
                             </div>
                             <div class="col-md-1"></div>
                         </div>

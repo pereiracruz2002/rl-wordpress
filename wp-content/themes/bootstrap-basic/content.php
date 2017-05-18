@@ -11,19 +11,45 @@
 
 	
 	<?php if (is_search()) { // Only display Excerpts for Search ?> 
-	<div class="entry-summary">
+	<div class="entry-summary txt_desc_produtos">
 		<?php the_excerpt(); ?> 
 		<div class="clearfix"></div>
 	</div><!-- .entry-summary -->
-	<?php } else { ?> 
+	<?php } else { //*?> 
 	<div class="entry-content">
-		<?php the_content(bootstrapBasicMoreLinkText()); ?> 
+		<div class="row">
+			<div class="col-md-5">
+				<?php the_post_thumbnail('big', array('class' => '')); ?>
+			</div>
+			<div class="col-md-7 txt_desc_produtos">
+				<div class="row">
+					<?php the_content(bootstrapBasicMoreLinkText()); ?>
+				</div>
+			</div>
+		</div>
 		<div class="clearfix"></div>
+		<div class="row separa_coluna">
+			<?php
+	            $args = array('post_type' => 'artigos',
+	            	'artigos_category'=>'utilidade',
+	                'orderby' => 'post_date',
+	                'order'=> 'DESC',
+	                'numberposts'     => 4);
+	            $myposts = get_posts( $args );
+
+	            foreach( $myposts as $post ) :  setup_postdata($post);
+	         ?>
+				<div class="col-md-3">
+					<h4 class="sutit_desc_produtos"><?php echo the_title();?></h4>
+					<hr />
+					<?php the_post_thumbnail('thumbnail', array('class' => 'flutuar-img')); ?>
+					<a class="btn btn-primary" href="<?php the_permalink();?>">&gt;&gt; mais detalhes</a>
+				</div>
+			<?php endforeach;?>
+		</div>
+
 		<?php 
-		/**
-		 * This wp_link_pages option adapt to use bootstrap pagination style.
-		 * The other part of this pager is in inc/template-tags.php function name bootstrapBasicLinkPagesLink() which is called by wp_link_pages_link filter.
-		 */
+
 		wp_link_pages(array(
 			'before' => '<div class="page-links">' . __('Pages:', 'bootstrap-basic') . ' <ul class="pagination">',
 			'after'  => '</ul></div>',
@@ -33,12 +59,12 @@
 	</div><!-- .entry-content -->
 	<?php } //endif; ?> 
 
-	
+	<?php /*?>
 	<footer class="entry-meta">
 		<?php if ('post' == get_post_type()) { // Hide category and tag text for pages on Search ?> 
 		<div class="entry-meta-category-tag">
 			<?php
-				/* translators: used between list items, there is a space after the comma */
+				
 				$categories_list = get_the_category_list(__(', ', 'bootstrap-basic'));
 				if (!empty($categories_list)) {
 			?> 
@@ -48,7 +74,7 @@
 			<?php } // End if categories ?> 
 
 			<?php
-				/* translators: used between list items, there is a space after the comma */
+				
 				$tags_list = get_the_tag_list('', __(', ', 'bootstrap-basic'));
 				if ($tags_list) {
 			?> 
@@ -67,4 +93,5 @@
 			<?php bootstrapBasicEditPostLink(); ?> 
 		</div><!--.entry-meta-comment-tools-->
 	</footer><!-- .entry-meta -->
+	<?php */ ?>
 </article><!-- #post-## -->
