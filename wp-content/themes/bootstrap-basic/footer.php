@@ -49,7 +49,14 @@
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
         
-        <script src="scripts/app.js"></script>
+        
+        <script>
+            jQuery(document).ready(function(){
+                jQuery('.myCarousel').carousel({
+                    interval: 2000
+                });    
+            });
+        </script>
     </body>
 </html>
 

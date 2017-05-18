@@ -1,0 +1,262 @@
+.azul{
+	background-color: blue;
+}
+.vermelho{
+	background-color: red;
+}
+.fx_azul_top{
+	background-color: #9CB8D7;
+	height: 36px;
+}
+.txt_slogan{
+	float: left;
+	margin-left: -50px;
+	margin-top: 5px;
+	font-size: 17px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
+}
+.fa-phone{
+	float: left;
+	color: white;
+	margin-top: 15px;
+	font-size: 10px;
+}
+.txt_telefone_top{
+	float: left;
+	color: white;
+	margin-top: 5px;
+	font-size: 17px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.ddd{
+	float: left;
+	color: white;
+	margin-top: 9px;
+	font-size: 13px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.telefone_top{
+	float: left;
+	margin-left:4px;
+	color: white;
+	margin-top: 6px;
+	font-size: 16px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.btn_prod_index {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 12px;
+  background: #1E4C9E;
+  padding: 9px 16px 10px 15px;
+	margin-top: 6px;
+  text-decoration: none;
+	width: 130px;
+}
+.btn_prod_index:hover {
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.btn_dec_prod {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 10px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  background: #1E4C9E;
+  padding: 9px 16px 10px 15px;
+	margin-top: 6px;
+	float: left;
+  text-decoration: none;
+	width: 180px;
+	text-align: center;
+}
+.btn {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 11px;
+  background: #1E4C9E;
+  padding: 9px 16px 10px 15px;
+  margin-top: 10px;
+  float: right;
+  text-decoration: none;
+  width: 150px;
+}
+
+.btn:hover {
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+
+}
+.btn_dec_prod:hover {
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.btn_prod_int {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 4px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 13px;
+  background: #1E4C9E;
+  padding: 6px 14px 6px 12px;
+	margin-top: 13px;
+	float: left;
+  text-decoration: none;
+	width:150px;
+}
+.btn_prod_int:hover {
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.menu{
+	float: left;
+	margin-left: -25px;
+	margin-top: 20px;
+	font-size: 14px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.busca{
+	float: right;
+	margin-right: -80px;
+	margin-top: -25px;
+}
+.fx_azul_banner{
+	background-color: #C6CED5;
+	height: 5px;
+}
+.txt_desc{
+	line-height: 18px;
+	font-size: 12px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.tit_categoria{
+	text-align: center;
+	letter-spacing: 15px;
+	font-size: 20px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.pics_pq{
+	text-align: center;
+}
+.fundo_rodape{
+	background-color: #F7F7F7;
+}
+.tit_rodape{
+	float: left;
+	margin-top: 20px;
+	font-size: 13px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.menu_rodapde{
+	float: left;
+	line-height: 20px;
+	font-size: 12px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.rodape_azul{
+	text-align: center;
+	line-height: 15px;
+	font-size: 14px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
+	background-color: #1E4C9E;
+}
+.fx_azul_tit{
+	background-color: #2251A1;
+	height: 40px;
+}
+.txt_tit_fx_azul{
+	float: left;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	margin-top: 8px;
+	margin-left: 50px;
+	letter-spacing: 10px;
+	color: white;
+}
+.linha_tit_empresa{
+	height:2px;
+	width: 100px;
+	border:none;
+	background-color:#FCCA26;
+	margin-top: 50px;
+	margin-bottom: 0px;
+}
+.tit_internas{
+	float: left;
+	margin-top: 10px;
+}
+.tit_desc_produtos{
+	float: left;
+	font-size: 16px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 5px;
+	color: #2151A0;
+}
+.txt_desc_produtos{
+	float: left;
+	font-size: 15px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 30px;
+	text-align: justify;
+}
+.txt_empresa{
+	float: left;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	text-align: justify;
+	margin-top: 10px;
+}
+.tit_valores{
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 10px;
+}
+.txt_valores{
+	float: left;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 25px;
+	text-align: center;
+	margin-top: 8x;
+}
+.picempresa{
+	width: 100%;
+}
+.sutit_desc_produtos{
+	float: left;
+	font-size: 13px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 5px;
+	color: #2151A0;
+}

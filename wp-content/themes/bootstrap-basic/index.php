@@ -11,6 +11,19 @@ get_header();
  * determine main column size from actived sidebar
  */
 $main_column_size = bootstrapBasicGetMainColumnSize();
+$args=array(
+  'orderby' => 'name',
+  'order' => 'ASC'
+  );
+$categories=get_categories($args);
+//   foreach($categories as $category) { 
+//     echo '<p>Category: <a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a> </p> ';
+//     echo '<p> Description:'. $category->description . '</p>';
+//     echo '<p> Post Count: '. $category->count . '</p>'; 
+// } 
+$rand_keys = array_rand($categories, 2);
+echo $categories[$rand_keys[0]] . "\n";
+echo $categories[$rand_keys[1]] . "\n";
 ?>
 <?php /* ?>
 <?php get_sidebar('left'); ?> 
@@ -36,8 +49,23 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 <?php get_sidebar('right'); ?> 
 <?php */ ?>
  <section id="conteudo">
-            <div id="header_img">
-                <img src="<?php echo get_template_directory_uri();?>/img/banner.jpg" class="img-responsive" alt="utilidade">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="<?php echo get_template_directory_uri();?>/img/banner.jpg" class="img-responsive" alt="utilidade">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo get_template_directory_uri();?>/img/banner.jpg" class="img-responsive" alt="utilidade">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo get_template_directory_uri();?>/img/banner.jpg" class="img-responsive" alt="utilidade">
+                    </div>
+                </div>
             </div>
             <div id="main" class="container">
                 <div class="row">

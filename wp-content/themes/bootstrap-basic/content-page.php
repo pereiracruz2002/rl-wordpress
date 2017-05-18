@@ -1,10 +1,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
+	
 
 	<div class="entry-content">
-		<?php the_content(); ?> 
+		<div class="row">
+			<div class="col-md-5">
+				<?php the_post_thumbnail('big', array('class' => '')); ?>
+			</div>
+			<div class="col-md-7">
+				<div class="row">
+					<?php the_content(); ?>
+				</div>
 		<div class="clearfix"></div>
 		<?php
 		/**
@@ -18,8 +23,8 @@
 		));
 		?>
 	</div><!-- .entry-content -->
-	
+	<?php /*
 	<footer class="entry-meta">
 		<?php bootstrapBasicEditPostLink(); ?> 
-	</footer>
+	</footer> */?>
 </article><!-- #post-## -->
