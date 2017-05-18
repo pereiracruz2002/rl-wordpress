@@ -96,3 +96,4 @@ require_once(ABSPATH . 'wp-settings.php');
 
 
 /*zybxpto0192@ */
+/*admin - senha123*/
