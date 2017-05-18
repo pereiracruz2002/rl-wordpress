@@ -127,6 +127,20 @@ function create_post_type_fornecedores() {
     );
 }
 
+add_action( 'init', 'create_post_type_novidades' );
+function create_post_type_novidades() {
+    register_post_type( 'novidades',
+        array(
+            'labels' => array(
+                'name' => __( 'Novidades' ),
+                'singular_name' => __( 'Novidade' )
+            ),
+            'public' => true,
+            'supports' => array('title','editor','thumbnail')
+        )
+    );
+}
+
     
     function bootstrapBasicWidgetsInit() 
     {
