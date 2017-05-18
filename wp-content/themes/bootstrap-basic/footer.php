@@ -53,11 +53,12 @@
         
         <script>
             jQuery(document).ready(function(){
-                jQuery('.myCarousel').carousel({
+                jQuery('#myCarousel').carousel({
                     interval: 2000
                 });    
             });
         </script>
+        <?php wp_footer(); ?> 
     </body>
 </html>
 
@@ -85,7 +86,7 @@
 		
 		
 		<!--wordpress footer-->
-		<?php wp_footer(); ?> 
+		
 	</body>
 </html>
 */?>
