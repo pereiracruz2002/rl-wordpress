@@ -239,7 +239,9 @@ body {
   text-transform: uppercase; }
 
 #bloco-menu {
-  padding-top: 10px; }
+  padding-top: 10px;
+  font-size: 12px;
+   }
 
 .form-control {
   height: 25px;
@@ -258,11 +260,13 @@ body {
 #pre_footer {
   background-color: #F7F7F7;
   margin-top: 30px;
-  padding-top: 10px; }
+  padding-top: 10px; 
+  font-size: 1.1em;
+}
 
 #pre_footer h3 {
   text-transform: uppercase;
-  font-size: 2.3; }
+  font-size: 1.3em; }
 
 #pre_footer ul {
   list-style: none; }
@@ -326,13 +330,77 @@ footer {
   padding-top:0;
 }
 
+.tit_internas{
+  color: #222222;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  text-rendering: optimizeLegibility;
+  font-size: 2.5em;
+  padding-top: 10px;
+}
+
 .linha_tit_empresa {
   height: 2px;
   width: 100px;
   border: none;
   background-color: #FCCA26;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 0px;
+}
+
+.txt_empresa{
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.espaco_20{
+  padding-top:12px;
+}
+
+.btn_azulao{
+  background-color:#1E4C9E;
+  color: #ffffff;
+}
+
+.navbar-default{
+  background-image: none;
+}
+
+.navbar {
+  position: relative;
+  min-height: auto;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+}
+
+#myCarousel{
+  border-top: 5px solid #C6CED5;
+}
+
+#main-column .post, #main-column .page{
+  border:0;
+}
+
+.separa_coluna_menor{
+  padding-top: 20px;
+}
+
+.tit_valores {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 10px;
+  font-size:2.0em;
+}
+
+.txt_valores{
+  font-size: 1.5em;
+  line-height: 20px;
 }
 
 

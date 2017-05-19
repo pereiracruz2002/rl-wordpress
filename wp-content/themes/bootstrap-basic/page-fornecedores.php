@@ -41,23 +41,23 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 									<?php the_content(); ?>
 								</div>
 								<div class="row">
-									<?php
-								    global $wp_query;
-								    $args = array_merge( $wp_query->query_vars, array( 'post_type' => 'fornecedores' ) );
-								    query_posts( $args );
-								    $i = 0;
-									  ?>
-									  <?php while ( have_posts() ) : the_post();?>
-									  <?php $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
-									      <div class="col-md-3">
-			                               <img src="<?php echo $banner[0];?>" class="img-responsive" alt="utilidade">
-			                            </div>
-									    <?php
-									    $i++;
-									    endwhile;
-									    // Reset Query
-									    wp_reset_query();
-									  ?>
+									   	<?php
+					    global $wp_query;
+					    $args = array_merge( $wp_query->query_vars, array( 'post_type' => 'banners' ) );
+					    query_posts( $args );
+					    $i = 0;
+						  ?>
+						  <?php while ( have_posts() ) : the_post();?>
+						  <?php $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
+						      <div class="col-md-4">
+                               <img src="<?php echo $banner[0];?>" class="img-responsive" alt="utilidade">
+                            </div>
+						    <?php
+						    $i++;
+						    endwhile;
+						    // Reset Query
+						    wp_reset_query();
+						  ?>
 								</div>
 							</div>
 							<div class="clearfix"></div>

@@ -54,7 +54,7 @@
         <script>
             jQuery(document).ready(function(){
                 jQuery('#myCarousel').carousel({
-                    interval: 2000
+                    interval: 4000
                 });    
             });
         </script>

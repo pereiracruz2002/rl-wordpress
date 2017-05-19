@@ -46,20 +46,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-2 col-md-offset-1">
-                       
-                            <a id="logotipo" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><img src="<?php echo get_template_directory_uri();?>/img/logo.png" class="img-responsive" alt="logo">
-     
+                        <a id="logotipo" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><img src="<?php echo get_template_directory_uri();?>/img/logo.png" class="img-responsive" alt="logo">
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-9 espaco_20">
                         <div class="row">
                             <div class="col-md-3 col-md-offset-8">
-                                <a href="#" class="btn btn-primary pull-right font11">LOGIN DO CLIENTE ></a>
+                                <a href="#" class="btn btn_azulao pull-right font11">LOGIN DO CLIENTE ></a>
                             </div>
                             <div class="col-md-1"></div>
                         </div>
                         <div id="bloco-menu" class="row">
                             <div class="col-md-8">
-                            	<nav class="navbar navbar-default" role="navigation">
+                            	<nav class="navbar" role="navigation">
 								<div class="navbar-header">
 									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary-collapse">
 										<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>

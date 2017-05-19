@@ -7,7 +7,7 @@
 				<?php the_post_thumbnail('big', array('class' => '')); ?>
 			</div>
 			<div class="col-md-7">
-				<div class="row">
+				<div class="row ">
 					<?php the_content(); ?>
 				</div>
 		<div class="clearfix"></div>

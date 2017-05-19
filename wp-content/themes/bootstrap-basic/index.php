@@ -13,7 +13,8 @@ get_header();
 $main_column_size = bootstrapBasicGetMainColumnSize();
 $args=array(
   'orderby' => 'name',
-  'order' => 'ASC'
+  'order' => 'ASC',
+  'taxonomy'=>'artigos'
   );
 $categories=get_categories($args);
 //   foreach($categories as $category) { 
@@ -21,9 +22,8 @@ $categories=get_categories($args);
 //     echo '<p> Description:'. $category->description . '</p>';
 //     echo '<p> Post Count: '. $category->count . '</p>'; 
 // } 
-$rand_keys = array_rand($categories, 1);
-echo $categories[$rand_keys[0]] . "\n";
-echo $categories[$rand_keys[1]] . "\n";
+//$rand_keys = array_rand($categories, 1);
+
 ?>
 <?php /* ?>
 <?php get_sidebar('left'); ?> 
@@ -53,17 +53,16 @@ echo $categories[$rand_keys[1]] . "\n";
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner" role="listbox">
+                    <!-- <div class="item active">
+                        <img src="<?php echo get_template_directory_uri();?>/img/banner.jpg" class="img-responsive" alt="utilidade">
+                    </div> -->
                     <div class="item active">
-                        <img src="<?php echo get_template_directory_uri();?>/img/banner.jpg" class="img-responsive" alt="utilidade">
+                        <img src="<?php echo get_template_directory_uri();?>/img/banner1_topo.png" class="img-responsive" alt="utilidade">
                     </div>
                     <div class="item">
-                        <img src="<?php echo get_template_directory_uri();?>/img/banner.jpg" class="img-responsive" alt="utilidade">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo get_template_directory_uri();?>/img/banner.jpg" class="img-responsive" alt="utilidade">
+                        <img src="<?php echo get_template_directory_uri();?>/img/banner2_topo.png" class="img-responsive" alt="utilidade">
                     </div>
                 </div>
             </div>
@@ -85,13 +84,13 @@ echo $categories[$rand_keys[1]] . "\n";
 
 					            foreach( $myposts as $post ) :  setup_postdata($post);
 					            ?>
-                            <div class="col-md-3 col-xs-6 col-sm-6 separa_coluna">
+                            <div class="col-md-3 col-xs-6 col-sm-6 separa_coluna_menor">
                                 <?php the_post_thumbnail('thumbnail', array('class' => 'flutuar-img')); ?>
                                 <div class="txt_desc">
                                      <?php echo the_title();?><br>
 			     					 <?php echo get_the_excerpt();?>
                                 </div>
-                                <a class="btn btn-primary" href="<?php the_permalink();?>">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="<?php the_permalink();?>">>> Mais Detalhes</a>
                             </div>
                            <!--  <div class="col-md-3">
                                 <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
@@ -100,7 +99,7 @@ echo $categories[$rand_keys[1]] . "\n";
                                     <p>fornecedor: Wincy</p>
                                     <p>quantidade mínima: 50pçs</p>
                                 </div>
-                                <a class="btn btn-primary" href="#">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
                             </div>
                             <div class="col-md-3">
                                 <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
@@ -109,7 +108,7 @@ echo $categories[$rand_keys[1]] . "\n";
                                     <p>fornecedor: Wincy</p>
                                     <p>quantidade mínima: 50pçs</p>
                                 </div>
-                                <a class="btn btn-primary" href="#">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
                             </div>
                             <div class="col-md-3">
                                 <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
@@ -118,7 +117,7 @@ echo $categories[$rand_keys[1]] . "\n";
                                     <p>fornecedor: Wincy</p>
                                     <p>quantidade mínima: 50pçs</p>
                                 </div>
-                                <a class="btn btn-primary" href="#">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
                             </div> -->
                             <?php
 				            endforeach;
@@ -134,7 +133,7 @@ echo $categories[$rand_keys[1]] . "\n";
                                     <p>fornecedor: Wincy</p>
                                     <p>quantidade mínima: 50pçs</p>
                                 </div>
-                                <a class="btn btn-primary" href="#">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
                             </div>
                             <div class="col-md-3">
                                 <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
@@ -143,7 +142,7 @@ echo $categories[$rand_keys[1]] . "\n";
                                     <p>fornecedor: Wincy</p>
                                     <p>quantidade mínima: 50pçs</p>
                                 </div>
-                                <a class="btn btn-primary" href="#">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
                             </div>
                             <div class="col-md-3">
                                 <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
@@ -152,7 +151,7 @@ echo $categories[$rand_keys[1]] . "\n";
                                     <p>fornecedor: Wincy</p>
                                     <p>quantidade mínima: 50pçs</p>
                                 </div>
-                                <a class="btn btn-primary" href="#">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
                             </div>
                             <div class="col-md-3">
                                 <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
@@ -161,7 +160,7 @@ echo $categories[$rand_keys[1]] . "\n";
                                     <p>fornecedor: Wincy</p>
                                     <p>quantidade mínima: 50pçs</p>
                                 </div>
-                                <a class="btn btn-primary" href="#">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
                             </div>
                         </div> -->
                     </div>
@@ -191,13 +190,13 @@ echo $categories[$rand_keys[1]] . "\n";
 
 				            foreach( $myposts as $post ) :  setup_postdata($post);
 				            ?>
-                           <div class="col-md-3 separa_coluna">
+                           <div class="col-md-3 separa_coluna_menor">
                                 <?php the_post_thumbnail('thumbnail', array('class' => 'flutuar-img')); ?>
                                 <div class="txt_desc">
                                      <?php echo the_title();?><br>
 			     					 <?php echo get_the_excerpt();?>
                                 </div>
-                                <a class="btn btn-primary" href="<?php the_permalink();?>">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="<?php the_permalink();?>"> >> Mais Detalhes</a>
                             </div>
                              <?php
 				            endforeach;
@@ -211,7 +210,7 @@ echo $categories[$rand_keys[1]] . "\n";
                                     <p>fornecedor: Wincy</p>
                                     <p>quantidade mínima: 50pçs</p>
                                 </div>
-                                <a class="btn btn-primary" href="#">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
                             </div>
                             <div class="col-md-3">
                                 <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
@@ -220,7 +219,7 @@ echo $categories[$rand_keys[1]] . "\n";
                                     <p>fornecedor: Wincy</p>
                                     <p>quantidade mínima: 50pçs</p>
                                 </div>
-                                <a class="btn btn-primary" href="#">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
                             </div>
                             <div class="col-md-3">
                                 <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
@@ -229,7 +228,7 @@ echo $categories[$rand_keys[1]] . "\n";
                                     <p>fornecedor: Wincy</p>
                                     <p>quantidade mínima: 50pçs</p>
                                 </div>
-                                <a class="btn btn-primary" href="#">Mais Detalhes</a>
+                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
                             </div> -->
                         </div>
                     </div>
