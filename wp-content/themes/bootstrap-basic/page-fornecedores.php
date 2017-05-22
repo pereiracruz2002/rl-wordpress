@@ -16,8 +16,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	<header class="entry-header fx_azul_tit">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
+				<div class="col-md-11 col-md-offset-1">
+					<?php the_breadcrumb(); ?>
 				</div>
 			</div>
 		</div>
@@ -38,18 +38,26 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 							</div>
 							<div class="col-md-7">
 								<div class="row">
+									<h4 class="tit_internas">Fornecedores</h4>
+									<div class="linha_tit_empresa"></div>
+								</div>
+								<div class="row">
+									<div class="txt_empresa">
 									<?php the_content(); ?>
+									</div>
 								</div>
 								<div class="row">
 									   	<?php
 					    global $wp_query;
-					    $args = array_merge( $wp_query->query_vars, array( 'post_type' => 'banners' ) );
+					    $args = array_merge( array( 'post_type' => 'fornecedores' ) );
 					    query_posts( $args );
 					    $i = 0;
 						  ?>
-						  <?php while ( have_posts() ) : the_post();?>
+						  <?php while ( have_posts() ) : the_post();
+		
+						  ?>
 						  <?php $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
-						      <div class="col-md-4">
+						      <div class="col-md-3 paddingTop10">
                                <img src="<?php echo $banner[0];?>" class="img-responsive" alt="utilidade">
                             </div>
 						    <?php

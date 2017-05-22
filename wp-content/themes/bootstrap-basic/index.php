@@ -11,72 +11,80 @@ get_header();
  * determine main column size from actived sidebar
  */
 $main_column_size = bootstrapBasicGetMainColumnSize();
-$args=array(
-  'orderby' => 'name',
-  'order' => 'ASC',
-  'taxonomy'=>'artigos'
-  );
-$categories=get_categories($args);
-//   foreach($categories as $category) { 
-//     echo '<p>Category: <a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a> </p> ';
-//     echo '<p> Description:'. $category->description . '</p>';
-//     echo '<p> Post Count: '. $category->count . '</p>'; 
-// } 
-//$rand_keys = array_rand($categories, 1);
+$terms = get_terms( 'artigos_category' );
+$categories = array();
 
+if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+
+ foreach ( $terms as $term ) {
+   $categories[] = $term->name."-".$term->term_id;
+ }
+}
+shuffle($categories);
 ?>
-<?php /* ?>
-<?php get_sidebar('left'); ?> 
-				<div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
-					<main id="main" class="site-main" role="main">
-						<?php if (have_posts()) { ?> 
-						<?php 
-						// start the loop
-						while (have_posts()) {
-							the_post();
-							
 
-							get_template_part('content', get_post_format());
-						}// end while
-						
-						bootstrapBasicPagination();
-						?> 
-						<?php } else { ?> 
-						<?php get_template_part('no-results', 'index'); ?>
-						<?php } // endif; ?> 
-					</main>
-				</div>
-<?php get_sidebar('right'); ?> 
-<?php */ ?>
  <section id="conteudo">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <?php
+                        global $wp_query;
+                        $args = array( 'post_type' => 'img' );
+                        query_posts( $args );
+                        $i = 0;
+                         while ( have_posts() ) : the_post();
+                         $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
+                            <li data-target="#myCarousel" data-slide-to="<?php echo $i;?>" class="<?php echo ($i==0)? 'active': ' ';?>"></li>
+                        <?php
+                            $i++;
+                            endwhile;
+                            // Reset Query
+                            wp_reset_query();
+                          ?>
+                   <!--  <li data-target="#myCarousel" data-slide-to="1"></li> -->
                 </ol>
                 <div class="carousel-inner" role="listbox">
+                    
+                    <?php
+                        global $wp_query;
+                        $args = array( 'post_type' => 'img' );
+                        query_posts( $args );
+                        $i = 0;
+                         while ( have_posts() ) : the_post();
+                         $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
+                                <div class="item <?php echo ($i==0)? 'active': ' ';?>">
+                        <img src="<?php echo $banner[0];?>" class="img-responsive" alt="utilidade">
+                    </div>
+                            <?php
+                            $i++;
+                            endwhile;
+                            // Reset Query
+                            wp_reset_query();
+                          ?>
+
                     <!-- <div class="item active">
-                        <img src="<?php echo get_template_directory_uri();?>/img/banner.jpg" class="img-responsive" alt="utilidade">
-                    </div> -->
-                    <div class="item active">
                         <img src="<?php echo get_template_directory_uri();?>/img/banner1_topo.png" class="img-responsive" alt="utilidade">
                     </div>
                     <div class="item">
                         <img src="<?php echo get_template_directory_uri();?>/img/banner2_topo.png" class="img-responsive" alt="utilidade">
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div id="main" class="container">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-1">
-                        <img src="<?php echo get_template_directory_uri();?>/img/pic_utilidade.png" class="img-responsive" alt="utilidade">
-                        <h3 class="tit_categoria">Utilidades</h3>
+                        <?php 
+                        $array_nome = explode('-',$categories[0]); 
+                        $nome = $array_nome[0];
+                        $id   =  $array_nome[1];
+                        ?>
+                        <img src="<?php echo z_taxonomy_image_url($id); ?>" class="img-responsive" />
+                        <h3 class="tit_categoria"><?php echo ucfirst($nome);?></h3>
                     </div>
                     <div class="col-md-7">
                         <div class="row ">
                         	<?php
 					            $args = array('post_type' => 'artigos',
-					            	'artigos_category'=>'utilidade',
+					            	'artigos_category'=>$nome,
 					                'orderby' => 'post_date',
 					                'order'=> 'DESC',
 					                'numberposts'     => 8);
@@ -92,77 +100,12 @@ $categories=get_categories($args);
                                 </div>
                                 <a class="btn btn_azulao" href="<?php the_permalink();?>">>> Mais Detalhes</a>
                             </div>
-                           <!--  <div class="col-md-3">
-                                <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
-                                <div class="txt_desc">
-                                    <p>conjunto com 3 assadeiras</p>        
-                                    <p>fornecedor: Wincy</p>
-                                    <p>quantidade mínima: 50pçs</p>
-                                </div>
-                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
-                            </div>
-                            <div class="col-md-3">
-                                <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
-                                <div class="txt_desc">
-                                    <p>conjunto com 3 assadeiras</p>        
-                                    <p>fornecedor: Wincy</p>
-                                    <p>quantidade mínima: 50pçs</p>
-                                </div>
-                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
-                            </div>
-                            <div class="col-md-3">
-                                <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
-                                <div class="txt_desc">
-                                    <p>conjunto com 3 assadeiras</p>        
-                                    <p>fornecedor: Wincy</p>
-                                    <p>quantidade mínima: 50pçs</p>
-                                </div>
-                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
-                            </div> -->
                             <?php
 				            endforeach;
 				            // Reset Query
 				            wp_reset_query();
 				            ?>
                         </div>
-                        <!-- <div class="row separa_coluna">
-                            <div class="col-md-3">
-                                <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
-                                <div class="txt_desc">
-                                    <p>conjunto com 3 assadeiras</p>        
-                                    <p>fornecedor: Wincy</p>
-                                    <p>quantidade mínima: 50pçs</p>
-                                </div>
-                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
-                            </div>
-                            <div class="col-md-3">
-                                <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
-                                <div class="txt_desc">
-                                    <p>conjunto com 3 assadeiras</p>        
-                                    <p>fornecedor: Wincy</p>
-                                    <p>quantidade mínima: 50pçs</p>
-                                </div>
-                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
-                            </div>
-                            <div class="col-md-3">
-                                <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
-                                <div class="txt_desc">
-                                    <p>conjunto com 3 assadeiras</p>        
-                                    <p>fornecedor: Wincy</p>
-                                    <p>quantidade mínima: 50pçs</p>
-                                </div>
-                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
-                            </div>
-                            <div class="col-md-3">
-                                <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
-                                <div class="txt_desc">
-                                    <p>conjunto com 3 assadeiras</p>        
-                                    <p>fornecedor: Wincy</p>
-                                    <p>quantidade mínima: 50pçs</p>
-                                </div>
-                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             
@@ -175,14 +118,20 @@ $categories=get_categories($args);
 
                 <div class="row separa_coluna">
                     <div class="col-md-4 col-md-offset-1">
-                        <img src="<?php echo get_template_directory_uri();?>/img/pic_utilidade.png" class="img-responsive" alt="utilidade">
-                        <h3 class="tit_categoria">Escolar</h3>
+                        <?php 
+                        $array_nome = explode('-',$categories[1]); 
+                        $nome = $array_nome[0];
+                        $id   =  $array_nome[1];
+                        ?>
+                        <img src="<?php echo z_taxonomy_image_url($id); ?>" class="img-responsive" />
+                         
+                        <h3 class="tit_categoria"><?php echo ucfirst($nome);?></h3>
                     </div>
                     <div class="col-md-7">
                         <div class="row">
                         	<?php
 				            $args = array('post_type' => 'artigos',
-				            		'artigos_category'=>'escolar',
+				            		'artigos_category'=>$nome,
 				                    'orderby' => 'post_date',
 				                    'order'=> 'DESC',
 				                    'numberposts'     => 8);
@@ -203,33 +152,7 @@ $categories=get_categories($args);
 				            // Reset Query
 				            wp_reset_query();
 				            ?>
-                            <!-- <div class="col-md-3">
-                                <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
-                                <div class="txt_desc">
-                                    <p>conjunto com 3 assadeiras</p>        
-                                    <p>fornecedor: Wincy</p>
-                                    <p>quantidade mínima: 50pçs</p>
-                                </div>
-                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
-                            </div>
-                            <div class="col-md-3">
-                                <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
-                                <div class="txt_desc">
-                                    <p>conjunto com 3 assadeiras</p>        
-                                    <p>fornecedor: Wincy</p>
-                                    <p>quantidade mínima: 50pçs</p>
-                                </div>
-                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
-                            </div>
-                            <div class="col-md-3">
-                                <img src="<?php echo get_template_directory_uri();?>/img/pic_util.png" class="img-responsive" alt="utilidade">
-                                <div class="txt_desc">
-                                    <p>conjunto com 3 assadeiras</p>        
-                                    <p>fornecedor: Wincy</p>
-                                    <p>quantidade mínima: 50pçs</p>
-                                </div>
-                                <a class="btn btn_azulao" href="#">Mais Detalhes</a>
-                            </div> -->
+                            
                         </div>
                     </div>
                 </div>
@@ -254,15 +177,7 @@ $categories=get_categories($args);
 						    // Reset Query
 						    wp_reset_query();
 						  ?>
-                            <!-- <div class="col-md-4">
-                                <img src="<?php echo get_template_directory_uri();?>/img/banner1.png" class="img-responsive" alt="utilidade">
-                            </div>
-                            <div class="col-md-4">
-                                 <img src="<?php echo get_template_directory_uri();?>/img/banner2.png" class="img-responsive" alt="utilidade">
-                            </div>
-                            <div class="col-md-4">
-                                 <img src="<?php echo get_template_directory_uri();?>/img/banner3.png" class="img-responsive" alt="utilidade">
-                            </div> -->
+                            
                         </div>
                     </div>
                 </div>

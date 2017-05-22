@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<!-- <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1> -->
 
 		<?php if ('post' == get_post_type()) { ?> 
 		<div class="entry-meta">
@@ -9,7 +9,6 @@
 		<?php } //endif; ?> 
 	</header><!-- .entry-header -->
 
-	
 	<?php if (is_search()) { // Only display Excerpts for Search ?> 
 	<div class="entry-summary txt_desc_produtos">
 		<?php the_excerpt(); ?> 
@@ -20,9 +19,11 @@
 		<div class="row">
 			<div class="col-md-5">
 				<?php the_post_thumbnail('big', array('class' => '')); ?>
+				<?php do_shortcode('[multiple_images]'); ?>
 			</div>
 			<div class="col-md-7 txt_desc_produtos">
-				<div class="row">
+				<div  class="row">
+					<h4 class="tit_desc_produtos"><?php the_title(); ?></h4>
 					<?php the_content(bootstrapBasicMoreLinkText()); ?>
 				</div>
 			</div>
@@ -46,6 +47,7 @@
 					<a class="btn btn-primary" href="<?php the_permalink();?>">&gt;&gt; mais detalhes</a>
 				</div>
 			<?php endforeach;?>
+			
 		</div>
 
 		<?php 

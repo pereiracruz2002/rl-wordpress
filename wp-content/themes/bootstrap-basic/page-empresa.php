@@ -15,8 +15,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	<header class="entry-header fx_azul_tit">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
+				<div class="col-md-11 col-md-offset-1">
+					<?php the_breadcrumb(); ?>
 				</div>
 			</div>
 		</div>
