@@ -15,7 +15,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	<header class="entry-header fx_azul_tit">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-11 col-md-offset-1">
+				<div class="col-md-11 col-md-offset-1 col-xs-12 col-sm-12">
 					<?php the_breadcrumb(); ?>
 				</div>
 			</div>
@@ -23,7 +23,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 			
 	</header><!-- .entry-header --> 
 	<div class="container">
-		<div class="col-md-12 content-area" id="main-column">
+		<div class="col-md-12 col-xs-12 col-sm-12 content-area" id="main-column">
 			<main id="main" class="site-main" role="main">
 				<?php 
 				while (have_posts()) {
@@ -34,18 +34,18 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 
 	<div class="entry-content">
 		<div class="row">
-			<div class="col-md-5">
-				<?php the_post_thumbnail('big', array('class' => '')); ?>
+			<div class="col-md-5 col-xs-12 col-sm-12">
+				<?php the_post_thumbnail('big', array('class' => 'img-responsive')); ?>
 			</div>
-			<div class="col-md-7">
+			<div class="col-md-7 col-sm-12 col-xs-12">
 				<div class="row ">
 					<?php the_content(); ?>
 				</div>
 			</div>
 		<div class="clearfix"></div>
 		<div class="row separa_coluna">
-			<div class="col-md-offset-1 col-md-11">
-				  <div class="col-md-4 columns pics_pq text-center"><img src="<?php echo get_template_directory_uri();?>/img/pic_missao.png"></img>
+			<div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
+				  <div class="col-md-4 col-sm-12 col-xs-12 columns pics_pq text-center"><img src="<?php echo get_template_directory_uri();?>/img/pic_missao.png"></img>
 				    <h4 class="tit_valores ">Missão</h4>
 				      <div class="txt_valores">
 				        Oferecer a melhor experiência de compra em alto
@@ -54,7 +54,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 				      </div>
 				  </div>
 
-				  <div class="col-md-4 columns pics_pq text-center"><img src="<?php echo get_template_directory_uri();?>/img/pic_visao.png"></img>
+				  <div class="col-md-4 col-sm-12 col-xs-12 columns pics_pq text-center"><img src="<?php echo get_template_directory_uri();?>/img/pic_visao.png"></img>
 				    <h4 class="tit_valores text-center">Visão</h4>
 				    <div class="txt_valores">
 				      Representar os clientes perante os fornecedores,
@@ -64,7 +64,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 				    </div>
 				  </div>
 
-				  <div class="col-md-4 columns pics_pq text-center"><img src="<?php echo get_template_directory_uri();?>/img/pic_valores.png"></img>
+				  <div class="col-md-4 col-sm-12 col-xs-12 columns pics_pq text-center"><img src="<?php echo get_template_directory_uri();?>/img/pic_valores.png"></img>
 				    <h4 class="tit_valores text-center">Valores</h4>
 				    <div class="txt_valores">
 				      Credibilidade, competência, comprometimento, excelência e lealdade.

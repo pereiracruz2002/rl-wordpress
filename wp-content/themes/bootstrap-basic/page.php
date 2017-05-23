@@ -16,14 +16,14 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 				<header class="entry-header fx_azul_tit">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-11 col-md-offset-1">
+							<div class="col-md-11 col-md-offset-1 col-xs-12 col-sm-12">
 								<?php the_breadcrumb(); ?>
 							</div>
 						</div>
 					</div>
 				</header><!-- .entry-header -->
 				<div class="container">
-					<div class="col-md-12 content-area" id="main-column">
+					<div class="col-md-12 col-xs-12 col-sm-12 content-area" id="main-column">
 						<main id="main" class="site-main" role="main">
 							<?php 
 							while (have_posts()) {

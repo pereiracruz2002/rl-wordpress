@@ -3,10 +3,10 @@
 
 	<div class="entry-content">
 		<div class="row">
-			<div class="col-md-5">
-				<?php the_post_thumbnail('big', array('class' => '')); ?>
+			<div class="col-md-5 col-sm-12 col-xs-12">
+				<?php the_post_thumbnail('big', array('class' => 'img-responsive')); ?>
 			</div>
-			<div class="col-md-7">
+			<div class="col-md-7 col-sm-12 col-xs-12">
 				<div class="row ">
 					<?php the_content(); ?>
 				</div>

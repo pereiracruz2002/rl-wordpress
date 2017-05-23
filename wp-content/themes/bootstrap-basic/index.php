@@ -71,7 +71,7 @@ shuffle($categories);
             </div>
             <div id="main" class="container">
                 <div class="row">
-                    <div class="col-md-4 col-md-offset-1">
+                    <div class="col-md-4 col-md-offset-1 col-sm-12 col-xs-12">
                         <?php 
                         $array_nome = explode('-',$categories[0]); 
                         $nome = $array_nome[0];
@@ -80,7 +80,7 @@ shuffle($categories);
                         <img src="<?php echo z_taxonomy_image_url($id); ?>" class="img-responsive" />
                         <h3 class="tit_categoria"><?php echo ucfirst($nome);?></h3>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-sm-12 col-xs-12">
                         <div class="row ">
                         	<?php
 					            $args = array('post_type' => 'artigos',
@@ -110,14 +110,14 @@ shuffle($categories);
                 </div>
             
                 <div class="row separa_coluna">
-                    <div class="col-md-10 col-md-offset-1">
+                    <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
                         <img src="<?php echo get_template_directory_uri();?>/img/banner_meio.jpg" class="img-responsive" alt="utilidade">
                     </div>
                     <div class="col-md-1"></div>
                 </div>
 
                 <div class="row separa_coluna">
-                    <div class="col-md-4 col-md-offset-1">
+                    <div class="col-md-4 col-md-offset-1 col-md-12 col-xs-12">
                         <?php 
                         $array_nome = explode('-',$categories[1]); 
                         $nome = $array_nome[0];
@@ -127,7 +127,7 @@ shuffle($categories);
                          
                         <h3 class="tit_categoria"><?php echo ucfirst($nome);?></h3>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-sm-12 col-xs-12">
                         <div class="row">
                         	<?php
 				            $args = array('post_type' => 'artigos',
@@ -139,7 +139,7 @@ shuffle($categories);
 
 				            foreach( $myposts as $post ) :  setup_postdata($post);
 				            ?>
-                           <div class="col-md-3 separa_coluna_menor">
+                           <div class="col-md-3 col-xs-6 col-sm-6 separa_coluna_menor">
                                 <?php the_post_thumbnail('thumbnail', array('class' => 'flutuar-img')); ?>
                                 <div class="txt_desc">
                                      <?php echo the_title();?><br>
@@ -157,7 +157,7 @@ shuffle($categories);
                     </div>
                 </div>
                 <div class="row separa_coluna">
-                    <div class="col-md-11 col-md-offset-1">
+                    <div class="col-md-11 col-md-offset-1 col-sm-12 col-xs-12">
                     	
                         <div class="row">
                         	<?php
@@ -168,7 +168,7 @@ shuffle($categories);
 						  ?>
 						  <?php while ( have_posts() ) : the_post();?>
 						  <?php $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
-						      <div class="col-md-4">
+						      <div class="col-md-4 col-sm-12 col-xs-12">
                                <img src="<?php echo $banner[0];?>" class="img-responsive" alt="utilidade">
                             </div>
 						    <?php

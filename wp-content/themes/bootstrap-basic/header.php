@@ -30,11 +30,11 @@
             <div id="topo">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-2 col-sm-12">
+						<div class="col-md-2 col-sm-12 col-xs-12">
 							<a id="logotipo" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><img src="<?php echo get_template_directory_uri();?>/img/logo.png" class="img-responsive" alt="logo">
 						</div>
 						<div class="col-md-10 col-sm-12 col-xs-12">
-							<div class="row white">
+							<div class="row white visible-lg-block">
 		                        <div class="col-md-6 col-sm-6 col-xs-12">
 		                            <p>18 anos de excelência, profissionalimo e inovação</p>
 		                        </div>
@@ -42,13 +42,13 @@
 		                            <p class="pull-right"><i class="glyphicon glyphicon-earphone font13"></i>Telefones:<span class="font13">11 </span>3228 - 2525 | 3326 - 6606 | 3228 - 3864</p>
 		                        </div>
 	                    	</div>
-	                    	<div class="row espaco_20">
+	                    	<div class="row espaco_20 visible-lg-block">
 								<div class="col-md-12">
 									 <a href="#" class="btn btn_azulao pull-right font11">LOGIN DO CLIENTE ></a>
 								</div>
 							</div>
 							<div id="bloco-menu" class="row">
-								<div class="col-md-9 col-sm-12">
+								<div class="col-md-9 col-sm-12 col-xs-12">
 	                            	<nav class="navbar navbar-default" role="navigation">
 										<div class="navbar-header">
 											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary-collapse">

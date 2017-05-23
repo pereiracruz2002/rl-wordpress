@@ -16,7 +16,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	<header class="entry-header fx_azul_tit">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-11 col-md-offset-1">
+				<div class="col-md-11 col-md-offset-1 col-xs-12 col-sm-12">
 					<?php the_breadcrumb(); ?>
 				</div>
 			</div>
@@ -24,7 +24,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 			
 	</header><!-- .entry-header --> 
 	<div class="container">
-		<div class="col-md-12 content-area" id="main-column">
+		<div class="col-md-12 col-xs-12 col-sm-12 content-area" id="main-column">
 			<main id="main" class="site-main" role="main">
 				<?php 
 				while (have_posts()) {
@@ -33,10 +33,10 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<div class="entry-content">
 						<div class="row">
-							<div class="col-md-5">
-								<?php the_post_thumbnail('big', array('class' => '')); ?>
+							<div class="col-md-5 col-xs-12 col-sm-12">
+								<?php the_post_thumbnail('big', array('class' => 'img-responsive')); ?>
 							</div>
-							<div class="col-md-7">
+							<div class="col-md-7 col-xs-12 col-sm-12">
 								<h4 class="tit_internas">Novidades</h4>
 									<div class="linha_tit_empresa"></div>
 								<div class="row">
@@ -53,12 +53,23 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 									  ?>
 									  <?php while ( have_posts() ) : the_post();?>
 									  <?php $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
-									      <!-- <div class="col-md-6 paddingTop10">
-			                               <img src="<?php echo $banner[0];?>" class="img-responsive" alt="utilidade">
-			                            </div> -->
+									    <div class="col-md-12 col-xs-12 col-sm-12 paddingTop10">
+									    	<div class="row">
+												<div class="col-md-3 col-xs-3 col-sm-3"> 
+													<img src="<?php echo $banner[0];?>" class="img-responsive" alt="utilidade">
+												</div>
+												<div class="col-md-7 col-xs-7 col-sm-7">
+													<h3><strong><?php echo the_title();?></strong></h3>
+													<p><strong><?php echo get_the_excerpt();?></strong></p>
+													<p class="pull-right"><a href="<?php the_permalink();?>" class="btn btn_azulao" role="button">Saiba Mais</a></p>
+												</div>
+									    	</div>
+
+			                              
+			                            </div>
 
 			                           
-										  <div class="col-sm-6 col-md-5 paddingTop10">
+										  <!-- <div class="col-sm-6 col-md-5 paddingTop10">
 										  	<div class="row novidades">
 										  		<div class="col-md-3">
 													<div class="thumbnail">
@@ -74,7 +85,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 												</div>
 											</div>
 										  </div>
-										  <div class="col-md-1"></div>
+										  <div class="col-md-1"></div> -->
 									
 									    <?php
 									    $i++;

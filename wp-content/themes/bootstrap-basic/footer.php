@@ -9,7 +9,7 @@
 <hr />
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-md-offset-1">
+            <div class="col-md-2 col-md-offset-1 col-xs-6 col-sm-6">
                 <h3>Institucional</h3>
                 <ul>
                     <li><a href="#">Quem Somos</a></li>
@@ -18,18 +18,18 @@
                     <li><a href="#">Showroom</a></li>
                 </ul>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6 col-sm-6">
                 <h3>Atendimento</h3>
                 <p>telefones: (11) 3228-2525 | 3326-6606</p>
                 <p>fax: (11) 3227-4737</p>
                 <p>segunda à sexta: 8h00 ás 18h00</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-12 col-sm-12">
                 <h3>LOCALIZAÇÃO</h3>
                 Av. Senador Queirós, 305 - Centro<br>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8119665768045!2d-46.63534418502263!3d-23.539264484693838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58579695bf15%3A0xa8974e85948b5340!2sAv.+Sen.+Queir%C3%B3s%2C+305+-+Centro%2C+S%C3%A3o+Paulo+-+SP%2C+01026-001!5e0!3m2!1spt-BR!2sbr!4v1491833597989" width="200" height="116" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-12 col-sm-12">
                 <h3>CADASTRE-SE</h3>
             </div>
         </div>
