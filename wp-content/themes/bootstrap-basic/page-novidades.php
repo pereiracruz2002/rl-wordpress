@@ -59,8 +59,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 													<img src="<?php echo $banner[0];?>" class="img-responsive" alt="utilidade">
 												</div>
 												<div class="col-md-7 col-xs-7 col-sm-7">
-													<h3><strong><?php echo the_title();?></strong></h3>
-													<p><strong><?php echo get_the_excerpt();?></strong></p>
+													<h3 class="titulo_news"><strong><?php echo the_title();?></strong></h3>
+													<p class-"txt_novidades"><?php echo get_the_excerpt();?></p>
 													<p class="pull-right"><a href="<?php the_permalink();?>" class="btn btn_azulao" role="button">Saiba Mais</a></p>
 												</div>
 									    	</div>

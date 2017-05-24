@@ -1,7 +1,7 @@
 <?php
 /**
  * Bootstrap Basic theme
- * 
+ *
  * @package bootstrap-basic
  */
 
@@ -18,12 +18,12 @@ if (!function_exists('bootstrapBasicSetup')) {
     /**
      * Setup theme and register support wp features.
      */
-    function bootstrapBasicSetup() 
+    function bootstrapBasicSetup()
     {
         /**
          * Make theme available for translation
          * Translations can be filed in the /languages/ directory
-         * 
+         *
          * copy from underscores theme
          */
         load_theme_textdomain('bootstrap-basic', get_template_directory() . '/languages');
@@ -51,11 +51,11 @@ if (!function_exists('bootstrapBasicSetup')) {
 
         // add support custom background
         add_theme_support(
-            'custom-background', 
+            'custom-background',
             apply_filters(
-                'bootstrap_basic_custom_background_args', 
+                'bootstrap_basic_custom_background_args',
                 array(
-                    'default-color' => 'ffffff', 
+                    'default-color' => 'ffffff',
                     'default-image' => ''
                 )
             )
@@ -158,12 +158,12 @@ function create_post_type_novidades() {
 
 function wpcf7_dynamic_to_filter_example($recipient, $args=array()) {
   if (isset($args['select-email'])) {
-    if ($args['select-email'] == 'send to email 1') {
-      $recipient = 'pereiracruz2002@gmail.com';
-    } elseif ($args['select-email'] == 'send to email 2') {
-      $recipient = 'flavio@wvtodoz.com.br';
-    } elseif ($args['select-email'] == 'sent to email 3') {
-      $recipient = 'email-01@email.com';
+    if ($args['select-email'] == 'Marcos Chan') {
+      $recipient = 'marcos@rlrepresentacao.com.br';
+    } elseif ($args['select-email'] == 'Eduardo RL') {
+      $recipient = 'eduardo@rlrepresentacao.com.br';
+    } elseif ($args['select-email'] == 'Robson') {
+      $recipient = 'robson@aizuconsultoria.com.br';
     }
   }
   return $recipient;
@@ -202,8 +202,8 @@ function the_breadcrumb() {
     echo '</ul>';
 }
 
-    
-    function bootstrapBasicWidgetsInit() 
+
+    function bootstrapBasicWidgetsInit()
     {
         register_sidebar(array(
             'name' => __('Sidebar right', 'bootstrap-basic'),
@@ -268,7 +268,7 @@ if (!function_exists('bootstrapBasicEnqueueScripts')) {
     /**
      * Enqueue scripts & styles
      */
-    function bootstrapBasicEnqueueScripts() 
+    function bootstrapBasicEnqueueScripts()
     {
         global $wp_scripts;
 
@@ -337,4 +337,3 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/widgets/BootstrapBasicSearchWidget.php';
 require get_template_directory() . '/inc/template-widgets-hook.php';
-

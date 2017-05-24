@@ -17,6 +17,7 @@ class Cf7_Entries_List extends WP_List_Table
     }
     public function get_entries($per_page = 5, $page_number = 1)
     {
+        
         global $wpdb;
         $cf7d_entry_order_by = apply_filters('cf7d_entry_order_by', '`data_id` DESC');
         $cf7d_entry_order_by = trim($cf7d_entry_order_by);

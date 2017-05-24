@@ -1,0 +1,270 @@
+/* Icon font for arrow icons */
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon_arrows/icomoon.eot');
+	src:url('../fonts/icomoon_arrows/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon_arrows/icomoon.woff') format('woff'),
+		url('../fonts/icomoon_arrows/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon_arrows/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+} /* Iconfont by Icomoon http://icomoon.io/ */
+
+
+/* Accordion style */
+.cbp-ntaccordion {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.cbp-ntsubaccordion {
+	list-style: none;
+}
+
+.cbp-ntaccordion .cbp-nttrigger {
+	cursor: pointer;
+}
+
+.cbp-ntaccordion h3 {
+	margin: 0 0 0.3em;
+	padding: 1em 0 0.5em;
+	border-bottom: 1px solid #ddd;
+  font-size: 1.75em;
+	/* font-size: 2.75em;*/
+	font-weight: 300;
+}
+
+.cbp-ntaccordion h4 {
+	font-size: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+	padding: 0.5em 0 0.5em;
+	margin: 0 0 0.5em;
+}
+
+.cbp-ntaccordion h5 {
+	font-size: 1.2em;
+	color: #aaa;
+	padding: 0.5em 0 0.5em;
+	margin: 0 0 0.5em;
+}
+
+.cbp-ntaccordion .cbp-ntcontent p {
+	color: #888;
+	font-size: 1.25em;
+	font-weight: 300;
+	line-height: 40px;
+	padding: 0.2em 0 1.5em;
+	margin: 0;
+}
+
+/* Arrow icons */
+.cbp-ntaccordion > li > .cbp-nttrigger:before,
+.cbp-ntsubaccordion > li > .cbp-nttrigger:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	color: #ddd;
+	margin-right: 0.5em;
+	-webkit-font-smoothing: antialiased;
+}
+
+.cbp-ntaccordion > li > .cbp-nttrigger:before {
+	font-size: 75%;
+}
+
+.cbp-ntaccordion > li > .cbp-nttrigger:before {
+	content: "\36";
+}
+.cbp-ntaccordion > li > .cbp-nttrigger:hover:before {
+	content: "\35";
+	color: inherit;
+}
+.cbp-ntaccordion > li.cbp-ntopen > .cbp-nttrigger:before,
+.no-js .cbp-ntaccordion > li > .cbp-nttrigger:before {
+	content: "\34";
+	color: inherit;
+}
+
+.cbp-ntsubaccordion > li > .cbp-nttrigger:before {
+	content: "\32";
+}
+.cbp-ntsubaccordion > li > .cbp-nttrigger:hover:before {
+	content: "\33";
+	color: inherit;
+}
+.cbp-ntsubaccordion > li.cbp-ntopen > .cbp-nttrigger:before,
+.no-js .cbp-ntsubaccordion > li > .cbp-nttrigger:before {
+	content: "\31";
+	color: inherit;
+}
+
+/* Initial height is zero */
+.cbp-ntaccordion .cbp-ntcontent {
+	height: 0;
+	overflow: hidden;
+
+}
+
+/* When open, set height to auto */
+.cbp-ntaccordion .cbp-ntopen > .cbp-ntcontent,
+.cbp-ntsubaccordion .cbp-ntopen > .cbp-ntcontent,
+.no-js .cbp-ntaccordion .cbp-ntcontent {
+	height: auto;
+}
+
+/* Example for media query */
+@media screen and (max-width: 32em) {
+
+	.cbp-ntaccordion {
+		font-size: 70%;
+	}
+
+}
+
+
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome.eot');
+	src:url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fontawesome.svg#fontawesome') format('svg'),
+		url('../fonts/fontawesome.woff') format('woff'),
+		url('../fonts/fontawesome.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+
+/* a {
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}*/
+
+.main,
+.container > header {
+	width: 90%;
+	max-width: 70em;
+	margin: 0 auto;
+	padding: 0 1.875em 3.125em 1.875em;
+}
+
+.container > header {
+	padding: 2.875em 1.875em 1.875em;
+}
+
+.container > header h1 {
+	font-size: 2.125em;
+	line-height: 1.3;
+	margin: 0;
+	float: left;
+	font-weight: 400;
+}
+
+.container > header span {
+	display: block;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	padding: 0 0 0.6em 0.1em;
+}
+
+.container > header nav {
+	float: right;
+}
+
+.container > header nav a {
+	display: block;
+	float: left;
+	position: relative;
+	width: 2.5em;
+	height: 2.5em;
+	background: #fff;
+	border-radius: 50%;
+	color: transparent;
+	margin: 0 0.1em;
+	border: 4px solid #47a3da;
+	text-indent: -8000px;
+}
+
+.container > header nav a:after {
+	content: attr(data-info);
+	color: #47a3da;
+	position: absolute;
+	width: 600%;
+	top: 120%;
+	text-align: right;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.container > header nav a:hover:after {
+	opacity: 1;
+}
+
+.container > header nav a:hover {
+	background: #47a3da;
+}
+
+.icon-drop:before,
+.icon-arrow-left:before {
+	font-family: 'fontawesome';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 2;
+	text-align: center;
+	color: #47a3da;
+	-webkit-font-smoothing: antialiased;
+	text-indent: 8000px;
+	padding-left: 8px;
+}
+
+.container > header nav a:hover:before {
+	color: #fff;
+}
+
+.icon-drop:before {
+	content: "\e000";
+}
+
+.icon-arrow-left:before {
+	content: "\f060";
+}

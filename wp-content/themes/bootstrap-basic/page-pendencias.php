@@ -1,7 +1,7 @@
 <?php
 /**
  * Template for displaying pages
- * 
+ *
  * @package bootstrap-basic
  */
 
@@ -11,8 +11,8 @@ get_header();
  * determine main column size from actived sidebar
  */
 $main_column_size = bootstrapBasicGetMainColumnSize();
-?> 
-<?php //get_sidebar('left'); ?> 
+?>
+<?php //get_sidebar('left'); ?>
 				<header class="entry-header fx_azul_tit">
 					<div class="container">
 						<div class="row">
@@ -25,16 +25,16 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 				<div class="container">
 					<div class="col-md-12 col-xs-12 col-sm-12 content-area" id="main-column">
 						<main id="main" class="site-main" role="main">
-							<?php 
+							<?php
 							while (have_posts()) {
 								the_post();
 							?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								
+
 
 								<div class="entry-content">
 									<div class="row">
-										
+
 										<div class="col-md-10 col-offset-md-2  col-sm-12 col-xs-12">
 											<div class="row ">
 												<?php the_content(); ?>
@@ -54,16 +54,16 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 								</div><!-- .entry-content -->
 								<?php /*
 								<footer class="entry-meta">
-									<?php bootstrapBasicEditPostLink(); ?> 
+									<?php bootstrapBasicEditPostLink(); ?>
 								</footer> */?>
 							</article><!-- #post-## -->
 							<?php
 				} //endwhile;
-				?> 
+				?>
 			</main>
 		</div>
 </div>
-<?php //get_sidebar('right'); ?> 
+<?php //get_sidebar('right'); ?>
 <script>
 jQuery( document ).ready(function() {
    jQuery('.btn-add').click(
@@ -71,4 +71,22 @@ jQuery( document ).ready(function() {
 });
 
 </script>
-<?php get_footer(); ?> 
+
+<script>
+
+jQuery( document ).ready(function() {
+   jQuery('.btn-add').click(function(){
+   		jQuery(this).parent().next().show();
+   	});
+
+
+
+   jQuery('.btn_remove').click(function(){
+   		jQuery(this).parent().hide();
+
+   	});
+});
+
+</script>
+
+<?php get_footer(); ?>

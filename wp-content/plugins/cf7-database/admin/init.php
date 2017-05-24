@@ -68,8 +68,14 @@ function cf7d_custom_submenu_page_callback()
     $fid = ((!is_null($first_form)) ? $first_form->id() : '');
 
     $search = ((isset($_GET['search'])) ? addslashes($_GET['search']) : '');
+
+
     
     if (!empty($fid)) {
+        global $current_user;
+        if($current_user->user_email != "pereiracruz2002@gmail.com"){
+            $search = $current_user->user_firstname;
+        }
         $cf7d_entry_order_by = apply_filters('cf7d_entry_order_by', '`data_id` DESC');
         $cf7d_entry_order_by = trim($cf7d_entry_order_by);
 
@@ -80,6 +86,9 @@ function cf7d_custom_submenu_page_callback()
         $query = sprintf("SELECT * FROM `".$wpdb->prefix."cf7_data_entry` WHERE `cf7_id` = %d AND data_id IN(SELECT * FROM (SELECT data_id FROM `".$wpdb->prefix."cf7_data_entry` WHERE 1 = 1 AND `cf7_id` = ".$fid." ".((!empty($search)) ? "AND `value` LIKE '%%".$search."%%'" : "")." GROUP BY `data_id` ORDER BY ".$cf7d_entry_order_by." LIMIT %d,%d) temp_table) ORDER BY " . $cf7d_entry_order_by, $fid, $offset, $items_per_page);
         $data = $wpdb->get_results($query);
         $data_sorted = cf7d_sortdata($data);
+
+        // var_dump($data_sorted);
+        // exit();
 
         $fields = cf7d_get_db_fields($fid);
 
